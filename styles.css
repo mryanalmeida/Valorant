@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    margin-top: 20px;
+}
+
+#main-title {
+    font-size: 3em;
+    color: cyan;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    background: rgba(25, 25, 25, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.character-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.hologram {
+    width: 150px;
+    height: 220px;
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid cyan;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hologram h2 {
+    font-size: 16px;
+    color: white;
+    margin: 5px 0;
+}
+
+.hologram p {
+    font-size: 18px;
+    font-weight: bold;
+    color: cyan;
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: cyan;
+    border: none;
+    border-radius: 5px;
+    color: #0d0d0d;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00bcd4;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #cccccc;
+}
+
+/* Estilos de feedback */
+.feedback {
+    position: fixed;
+    top: 20px;
+    /* Ajuste a posição superior */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fundo escuro com transparência */
+    color: #ffffff;
+    /* Texto branco */
+    padding: 15px 30px;
+    /* Padding para dar espaço interno */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    font-size: 18px;
+    /* Tamanho do texto */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    /* Sombra para profundidade */
+    z-index: 1000;
+    /* Garante que fique acima de outros elementos */
+    display: none;
+    /* Escondido por padrão */
+    opacity: 1;
+    /* Opacidade inicial */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease;
+    /* Transição suave */
+}
+
+/* Classe para desvanecer */
+.fade-out {
+    opacity: 0;
+    /* Torna o elemento invisível */
+    transform: translateY(-20px);
+    /* Move o elemento para cima durante o desvanecimento */
+}
+
+/* Media Queries para Responsividade */
+@media (min-width: 768px) {
+    #main-title {
+        font-size: 4em;
+    }
+
+    .hologram {
+        width: 180px;
+        height: 260px;
+    }
+
+    .hologram h2 {
+        font-size: 18px;
+    }
+
+    .hologram p {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #main-title {
+        font-size: 5em;
+    }
+
+    .hologram {
+        width: 220px;
+        height: 320px;
+    }
+}

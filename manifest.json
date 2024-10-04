@@ -1,0 +1,13 @@
+{
+    "name": "Valorant - Aleatório",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "img/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
